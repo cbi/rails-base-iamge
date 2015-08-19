@@ -17,3 +17,4 @@ RUN apt-get install -y nodejs
 # gem requirements
 RUN apt-get install -y freetds-dev
 RUN apt-get install -y imagemagick libmagickwand-dev
+RUN ln -s /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/Magick-config /usr/bin/Magick-config
