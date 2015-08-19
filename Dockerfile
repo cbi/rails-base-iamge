@@ -5,6 +5,9 @@ RUN apt-get update -qq && apt-get install -y build-essential
 # for postgres
 RUN apt-get install -y libpq-dev
 
+# for mysql
+RUN apt-get install -y libmysqlclient-dev mysql-client
+
 # for nokogiri
 RUN apt-get install -y libxml2-dev libxslt1-dev
 
