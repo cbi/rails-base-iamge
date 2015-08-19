@@ -13,3 +13,6 @@ RUN apt-get install -y libqt4-webkit libqt4-dev xvfb
 
 # for a JS runtime
 RUN apt-get install -y nodejs
+
+# gem requirements
+RUN apt-get install freetds-dev
