@@ -16,3 +16,4 @@ RUN apt-get install -y nodejs
 
 # gem requirements
 RUN apt-get install -y freetds-dev
+RUN apt-get install -y imagemagick libmagickwand-dev
