@@ -21,3 +21,11 @@ RUN apt-get install -y nodejs
 RUN apt-get install -y freetds-dev
 RUN apt-get install -y imagemagick libmagickwand-dev
 RUN ln -s /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/Magick-config /usr/bin/Magick-config
+
+# set up herokuish
+RUN curl https://github.com/gliderlabs/herokuish/releases/download/v0.3.2/herokuish_0.3.2_linux_x86_64.tgz \
+		--silent -L | tar -xzC /bin
+RUN /bin/herokuish buildpack install https://github.com/heroku/heroku-buildpack-ruby \
+	&& ln -s /bin/herokuish /build \
+	&& ln -s /bin/herokuish /start \
+	&& ln -s /bin/herokuish /exec
